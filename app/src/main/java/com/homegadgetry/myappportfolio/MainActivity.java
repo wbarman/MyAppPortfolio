@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private final String toastString = "This button will launch my %s app!";
 
     Button buttonPopularMovies;
-   /* @BindView(R.id.buttonBuildItBigger)
+    @BindView(R.id.buttonBuildItBigger)
     Button buttonBuildItBigger;
     @BindView(R.id.buttonMakeAppMaterial)
     Button buttonMakeAppMaterial;
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.buttonCapstone)
     Button buttonCapstone;
     @BindView(R.id.buttonStockHawk)
-    private Button buttonStockHawk;*/
+    Button buttonStockHawk;
 
 
     @Override
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // get rid of boilerplate code - I love this
-//        ButterKnife.bind(this);
+        ButterKnife.bind(this);
 
         // classic way of event handling
         buttonPopularMovies = (Button) findViewById(R.id.buttonPopularMovies);
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             default:
                 appName = "Unknown";
         }
-        Toast.makeText(MainActivity.this, String.format(toastString, appName), Toast.LENGTH_LONG)
+        Toast.makeText(MainActivity.this, String.format(toastString, appName), Toast.LENGTH_SHORT)
                 .show();
     }
 }
